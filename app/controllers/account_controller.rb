@@ -41,7 +41,7 @@ class AccountController < ApplicationController
   end
 
   def signup
-    if User.count > 0
+    if User.count > 0 
       flash[:notice] = 'Someone has already signed up for this installation!'
       redirect_to(:controller => '/')
       return
